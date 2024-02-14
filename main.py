@@ -12,7 +12,7 @@ def appium_driver():
     options = AppiumOptions()
     options.load_capabilities({
             "platformName": "Android",
-            "deviceName": "adb-RZ8R21SMYNN-i8os4l._adb-tls-connect._tcp",
+            "deviceName": "RZ8R21SMYNN",
             # Add other desired capabilities as needed
         })
     # Add other desired capabilities as needed
@@ -31,16 +31,10 @@ class TestAppiumAutomation:
         ))
         )
         el.click()
-<<<<<<< HEAD
-
-    @staticmethod
-    def test_pressNo(appium_driver):
-=======
     def test_pressNo(self,appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         el = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
-                AppiumBy.XPATH, '//android.view.ViewGroup[@resource-id="noBtn"]'
+                AppiumBy.XPATH, '//android.widget.TextView[@text="No"]'
             ))
         )
         el.click()
@@ -50,13 +44,7 @@ class TestAppiumAutomation:
             ))
         )
         el.click()
-<<<<<<< HEAD
-
-    @staticmethod
-    def test_pressyes(appium_driver):
-=======
     def test_pressyes(self,appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         el = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
                 AppiumBy.XPATH, '//android.widget.TextView[@text="Yes"]'
@@ -64,19 +52,14 @@ class TestAppiumAutomation:
         )
         el.click()
 
-<<<<<<< HEAD
-    @staticmethod
-    def test_mobile_number(appium_driver):
-=======
     def test_mobile_number(self,appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         ele = WebDriverWait(appium_driver,20).until(
             EC.presence_of_element_located((
                 AppiumBy.XPATH , '//android.widget.EditText[@text="Enter your mobile number"]'
             ))
         )
 
-        ele.send_keys('8374076596')
+        ele.send_keys('7972951602')
 
         ele_next_button = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
@@ -100,84 +83,16 @@ class TestAppiumAutomation:
             ))
         )
         otp_verification_ok_button.click()
-################################################ notification button  ##############################################################################################################
-    # notification_button.click()
-    # notification_back_button = WebDriverWait(appium_driver, 20).until(
-    #     EC.element_to_be_clickable((
-    #         AppiumBy.XPATH, '//android.widget.ImageView'
-    #     ))
-    # )
-    # notification_back_button.click()
-<<<<<<< HEAD
-    @staticmethod
-    def test_notification_button(appium_driver):
-=======
+
     def test_notification_button(self,appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         notification_button = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
                 AppiumBy.XPATH, '//android.view.ViewGroup[@resource-id="dashNotiffBtn"]/android.widget.ImageView'
             ))
         )
         notification_button.click()
-        notification_back_button = WebDriverWait(appium_driver, 20).until(
-            EC.element_to_be_clickable((
-                AppiumBy.XPATH, '//android.widget.ImageView'
-            ))
-        )
-        notification_back_button.click()
-
-    def test_notification_clear_button(self,appium_driver):
-        notification_clear_button = WebDriverWait(appium_driver, 20).until(
-            EC.element_to_be_clickable((
-                AppiumBy.XPATH, '//android.widget.TextView[@text="Clear"]'
-            ))
-        )
-        notification_clear_button.click()
-        clear_button_no = WebDriverWait(appium_driver, 20).until(
-            EC.element_to_be_clickable((
-                AppiumBy.XPATH, '//android.widget.TextView[@text="No"]'
-            ))
-        )
-        clear_button_no.click()
-
-    def test_clear_notification_yes(self,appium_driver):
-        notification_clear_button = WebDriverWait(appium_driver, 20).until(
-            EC.element_to_be_clickable((
-                AppiumBy.XPATH, '//android.widget.TextView[@text="Clear"]'
-            ))
-        )
-        notification_clear_button.click()
-
-        clear_yes_button = WebDriverWait(appium_driver, 20).until(
-            EC.element_to_be_clickable((
-                AppiumBy.XPATH, '//android.widget.TextView[@text="Yes"]'
-            ))
-        )
-        clear_yes_button.click()
-        allclear_ok_button = WebDriverWait(appium_driver, 20).until(
-            EC.element_to_be_clickable((
-                AppiumBy.XPATH, '//android.widget.TextView[@text="OK"]'
-            ))
-        )
-        allclear_ok_button.click()
-
-    def test_notification_back_button(self,appium_driver):
-        notification_back_button = WebDriverWait(appium_driver, 20).until(
-            EC.element_to_be_clickable((
-                AppiumBy.XPATH, '//android.widget.ImageView'
-            ))
-        )
-        notification_back_button.click()
-
-##############################################################################################################################################
-<<<<<<< HEAD
-    @staticmethod
-    def test_account(appium_driver):
-=======
 
     def test_account(self,appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         account_button = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
                 AppiumBy.XPATH, '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ImageView'
@@ -185,12 +100,7 @@ class TestAppiumAutomation:
         )
         account_button.click()
 #####################################################################################################
-<<<<<<< HEAD
-    @staticmethod
-    def test_dutystatus_on(appium_driver):
-=======
     def test_dutystatus_on(self,appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         dutystatus_on_button = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
                 AppiumBy.XPATH, '//android.widget.TextView[@text="OFF"]'
@@ -220,12 +130,7 @@ class TestAppiumAutomation:
         camera_button.click()
 
 ####################################################################################################
-<<<<<<< HEAD
-    @staticmethod
-    def test_logout_button(appium_driver):
-=======
     def test_logout_button(self,appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         logout_button = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
                 AppiumBy.XPATH, '//android.widget.TextView[@text="Logout"]'
@@ -253,13 +158,8 @@ class TestAppiumAutomation:
             )
             logoutno_button.click()
 
-<<<<<<< HEAD
-    @staticmethod
-    def test_performance_button(appium_driver):
-=======
 
     def test_performance_button(self, appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         performance_button = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
                 AppiumBy.XPATH, '//android.widget.Button[@content-desc="Performance, tab, 3 of 3"]/android.view.ViewGroup/android.widget.ImageView'
@@ -318,12 +218,7 @@ class TestAppiumAutomation:
         )
         weekly_button.click()
   #########################################################################################################
-<<<<<<< HEAD
-    @staticmethod
-    def test_myorders( appium_driver):
-=======
     def test_myorders(self, appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         myorders_button = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
                 AppiumBy.XPATH, '//android.widget.Button[@content-desc="Dashboard, tab, 1 of 3"]/android.view.ViewGroup/android.widget.ImageView'
@@ -350,7 +245,7 @@ class TestAppiumAutomation:
         orderdetails_button = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
                 AppiumBy.XPATH,
-                '(//android.widget.TextView[@text="Order Details"])[1]'
+                '(//android.widget.TextView[@text="Order Details"])[2]'
             ))
         )
         orderdetails_button.click()
@@ -390,7 +285,7 @@ class TestAppiumAutomation:
         )
         backtohomepage_button.click()
 ############################################ zoom in zoom out2 ##########################################
-    def test_orderdetails_button_second(self, appium_driver):
+    def test_orderdetails_button(self, appium_driver):
         orderdetails_button = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
                 AppiumBy.XPATH,
@@ -434,12 +329,7 @@ class TestAppiumAutomation:
         )
         backtohomepage_button.click()
 #########################################################################################################
-<<<<<<< HEAD
-    @staticmethod
-    def test_dropdown_myorders_completed(appium_driver):
-=======
     def test_dropdown_myorders_completed(self,appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         dropdown_orders = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
                 AppiumBy.XPATH,
@@ -454,13 +344,6 @@ class TestAppiumAutomation:
             ))
         )
         completed_button.click()
-        # order_completed_button = WebDriverWait(appium_driver, 20).until(
-        #     EC.element_to_be_clickable((
-        #         AppiumBy.XPATH,
-        #         '//android.widget.TextView[@text="Order Details"]'
-        #     ))
-        # )
-        # order_completed_button.click()
 #################################################################################################################
     def test_orderdetails_button_completed(self, appium_driver):
         order_completed_button = WebDriverWait(appium_driver, 20).until(
@@ -470,24 +353,19 @@ class TestAppiumAutomation:
             ))
         )
         order_completed_button.click()
-        # order_completed_ok_button = WebDriverWait(appium_driver, 20).until(
-        #     EC.element_to_be_clickable((
-        #         AppiumBy.XPATH,
-        #         '//android.widget.TextView[@text="Okay"]'
-        #     ))
-        # )
-        # order_completed_ok_button.click()
+        order_completed_ok_button = WebDriverWait(appium_driver, 20).until(
+            EC.element_to_be_clickable((
+                AppiumBy.XPATH,
+                '//android.widget.TextView[@text="Okay"]'
+            ))
+        )
+        order_completed_ok_button.click()
 
 ###################################################################################################################
-<<<<<<< HEAD
-    @staticmethod
-    def test_payments(appium_driver):
-=======
     def test_payments(self, appium_driver):
->>>>>>> afe342d73554412cbc9855b2ceee7566124bedb9
         payment_button = WebDriverWait(appium_driver, 20).until(
             EC.element_to_be_clickable((
-                AppiumBy.XPATH, '//android.widget.Button[@content-desc="Payments, tab, 2 of 3"]/android.widget.ImageView'
+                AppiumBy.XPATH, '//android.widget.Button[@content-desc="Payments, tab, 2 of 3"]/android.view.ViewGroup/android.widget.ImageView'
             ))
         )
         payment_button.click()
